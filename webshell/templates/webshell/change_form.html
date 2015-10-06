@@ -26,7 +26,7 @@
 
 {% block content %}
 <div id="content-main">
-    {% block object-tools %}
+    {% block no-object-tools %}
         {% if change %}
             {% if not is_popup %}
                 <ul class="object-tools">
@@ -72,7 +72,7 @@
             {% endif %}
             {# JavaScript for prepopulated fields #}
             {% prepopulated_fields_js %}
-            <button id="id_execute" type="button" onclick="executeSource();" style="font-size: 14px; padding: 10px 20px;">{% trans "Execute" %} (Ctrl+Enter)</button>
+            <input id="id_execute" type="button" onclick="executeSource();" style="font-size: 14px; padding: 10px 20px; height: initial" value='{% trans "Execute" %} (Ctrl+Enter)' />
             <hr><br>
             <pre id="id_output" class="syntax"></pre>
         </div>
